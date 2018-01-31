@@ -16,4 +16,33 @@
     
     
     
+    ***
+    Sarsa && Q-Learning
+    决策过程：sarsa与Q-learning 一致
+    更新过程：
+        Initialize Q(s,a) arbitrarily
+        Repeat (for each episode):
+        Initialize s
+        Repeat (for each step of episode):
+            Choose a from s using policy derived from Q(e.g, E-greedy)
+            Take action a, observe r, s'
+            Q(s,a) <- Q(s,a) + a[r + yMAXaQ(s',a') - Q(s,a)]
+            s <- s';
+        Until s is terminal
+        
+     Initialize Q(s,a) arbitrarily
+     Repeat (for each episode):
+        Initialize s
+        Choose a from s using policy derived from Q(e.g., e-greedy)
+        Repeat (for each step of episode):
+            Take action a, observer r,s'
+            Choose a' from s' using policy derived from Q (e.g., e-greedy)
+            Q(s,a) <- Q(s,a) + a[r + yQ(s',a') -Q(s,a)]
+            s <- s'; a <- a';
+        until s is terminal 
+        
+        
+    
+    
+    
     
